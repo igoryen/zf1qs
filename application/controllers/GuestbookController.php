@@ -26,5 +26,8 @@ class GuestbookController extends Zend_Controller_Action {
 
     $this->view->form = $form;
   }
+  public function preDispatch() {
+    $this->view->render('guestbook/_sidebar.phtml');
+  }
 
 }
